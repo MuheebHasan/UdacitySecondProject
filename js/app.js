@@ -1,21 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // تحديد عنصر الشريط التنقل
-  const navbar = document.getElementById("navbar");
+document.addEventListener("DOMContentLoaded", function () {
+  // تحديد كافة الأقسام في الصفحة
+  const sections = document.querySelectorAll("section");
+  const navList = document.getElementById("navbar"); // تغيير عنصر التنقل ليكون حسب معرف `id`
 
-  // تحديد الأقسام التي يجب إضافتها إلى الشريط التنقل
-  const sections = ['HTML', 'CSS', 'JavaScript'];
-
-  // إضافة كل قسم إلى الشريط التنقل
-  sections.forEach((section) => {
-      let li = document.createElement("li"); // إنشاء عنصر قائمة
-      let link = document.createElement("a"); // إنشاء عنصر رابط
-
-      // إعداد الرابط لكل قسم
-      link.href = `#${section.toLowerCase()}`;
-      link.textContent = section; // تعيين النص إلى اسم القسم
-
-      // إضافة الرابط إلى عنصر القائمة، وإضافته إلى الشريط التنقل
-      li.appendChild(link);
-      navbar.appendChild(li);
+  sections.forEach(section => {
+      // إنشاء عنصر <li> جديد لكل قسم
+      const listItem = document.createElement("li");
+      // إدراج رابط القسم في عنصر التنقل
+      listItem.innerHTML = `<a href="#${section.id}">${section.dataset.nav}</a>`;
+      // إضافة العنصر إلى قائمة التنقل
+      navList.appendChild(listItem);
   });
 });
