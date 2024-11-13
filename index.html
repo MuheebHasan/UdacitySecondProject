@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشروعي</title>
+    <title>My Project</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul id="navbar__list"></ul>
-        </nav>
-    </header>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <section id="section1" data-nav="القسم الأول">
-            <h2>القسم الأول</h2>
-            <p>محتوى القسم الأول.</p>
-        </section>
-        <section id="section2" data-nav="القسم الثاني">
-            <h2>القسم الثاني</h2>
-            <p>محتوى القسم الثاني.</p>
-        </section>
-        <section id="section3" data-nav="القسم الثالث">
-            <h2>القسم الثالث</h2>
-            <p>محتوى القسم الثالث.</p>
-        </section>
-        <section id="section4" data-nav="القسم الرابع">
-            <h2>القسم الرابع</h2>
-            <p>محتوى القسم الرابع.</p>
-        </section>
-    </main>
+    <!-- الأقسام -->
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>Content for Section 1...</p>
+    </section>
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>Content for Section 2...</p>
+    </section>
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>Content for Section 3...</p>
+    </section>
+    <section id="section4">
+        <h2>Section 4</h2>
+        <p>Content for Section 4...</p>
+    </section>
 
     <script src="js/app.js"></script>
 </body>
