@@ -1,108 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In</title>
-    <meta
-      name="description"
-      content="Challenge yourself with fun and interactive quizzes on various topics, test your knowledge, and learn new facts with our quiz app!"
-    />
-    <meta
-      name="keywords"
-      content="quiz app, online quizzes, trivia, knowledge test, fun quiz, educational games, challenge, learning, quiz game, interactive questions"
-    />
-    <meta name="author" content="Gaza Sky Geeks | Palestine" />
-    <link rel="icon" href="assest/icon.png" type="image/x-icon" />
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروعي</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="navbar__list"></ul>
+        </nav>
+    </header>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Mada:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </head>
-
-  <body>
-    <div class="wrapper">
-      <header class="main-header">
-        <div class="logo">
-          <img src="assest/quiz.png" alt="Quiz Logo" width="230" height="110" />
-        </div>
-
-        <div class="nav-img">
-          <nav class="navbar">
-            <ul id="navbar"></ul> <!-- سيتم ملؤها ديناميكيًا من خلال app.js -->
-          </nav>
-        </div>
-
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      </header>
-
-      <main class="user">
-        <div class="container-person-info">
-          <h2 class="welcome-person">Sign In</h2>
-          <p>Please enter your details below to start the <strong>quiz!</strong></p>
-          <form id="sign-in-form">
-            <div class="input-group">
-              <label for="email">Email</label>
-              <div class="input-container">
-                <i class="fa-regular fa-envelope email-icon"></i>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div class="error" id="emailError"></div>
-            </div>
-
-            <div class="input-group">
-              <label for="password">Password</label>
-              <div class="input-container">
-                <i class="fa-solid fa-lock password-icon"></i>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Password"
-                />
-              </div>
-              <div class="error" id="passwordError"></div>
-            </div>
-
-            <div class="sign-password-container">
-              <a href="#">Forget Password?</a>
-            </div>
-            <button type="submit" id="submitBtn">Start Quiz</button>
-            <div>
-              <p>Don’t have an account? <a href="#">Sign Up</a></p>
-            </div>
-          </form>
-        </div>
-      </main>
-
-      <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
+    <main>
+        <section id="section1" data-nav="القسم الأول">
+            <h2>القسم الأول</h2>
+            <p>محتوى القسم الأول.</p>
+        </section>
+        <section id="section2" data-nav="القسم الثاني">
+            <h2>القسم الثاني</h2>
+            <p>محتوى القسم الثاني.</p>
+        </section>
+        <section id="section3" data-nav="القسم الثالث">
+            <h2>القسم الثالث</h2>
+            <p>محتوى القسم الثالث.</p>
+        </section>
+        <section id="section4" data-nav="القسم الرابع">
+            <h2>القسم الرابع</h2>
+            <p>محتوى القسم الرابع.</p>
+        </section>
+    </main>
 
     <script src="js/app.js"></script>
-    <script src="https://unpkg.com/cloudinary-core/cloudinary-core.min.js"></script>
-  </body>
+</body>
 </html>

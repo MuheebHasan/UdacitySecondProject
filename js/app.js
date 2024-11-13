@@ -1,14 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // تحديد كافة الأقسام في الصفحة
-  const sections = document.querySelectorAll("section");
-  const navList = document.getElementById("navbar"); // تغيير عنصر التنقل ليكون حسب معرف `id`
+// اختيار جميع الأقسام وإنشاء روابط للتنقل
+const sections = document.querySelectorAll('section');
+const navList = document.querySelector('#navbar__list');
 
-  sections.forEach(section => {
-      // إنشاء عنصر <li> جديد لكل قسم
-      const listItem = document.createElement("li");
-      // إدراج رابط القسم في عنصر التنقل
-      listItem.innerHTML = `<a href="#${section.id}">${section.dataset.nav}</a>`;
-      // إضافة العنصر إلى قائمة التنقل
-      navList.appendChild(listItem);
-  });
+// إضافة أقسام التنقل ديناميكيًا
+sections.forEach(section => {
+    const listItem = document.createElement('li');
+    const anchor = document.createElement('a');
+    anchor.textContent = section.getAttribute('data-nav');
+    anchor.href = `#${section.id}`;
+    anchor.classList.add('menu__link');
+    listItem.appendChild(anchor);
+    navList.appendChild(listItem);
+});
+
+// تفعيل القسم الحالي عند التمرير
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop >= 0 && sectionTop < 300) {
+            document.querySelectorAll('.menu__link').forEach(link => {
+                link.classList.remove('active');
+            });
+            const activeLink = document.querySelector(`a[href="#${section.id}"]`);
+            activeLink.classList.add('active');
+        }
+    });
 });
