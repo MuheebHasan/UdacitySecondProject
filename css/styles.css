@@ -1,53 +1,44 @@
- /* إعدادات عامة للجسم */
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding-top: 60px; /* مسافة لترك مكان لشريط التنقل الثابت */
 }
 
-/* تصميم شريط التنقل */
-.navbar {
-  position: fixed; /* تثبيت الشريط في الأعلى */
+header {
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* لجعل الشريط فوق المحتويات الأخرى */
-  background-color: #ffffff;
-  box-shadow: 0px 4px 2px -2px gray; /* ظل للشريط */
+  background-color: #333;
+  color: white;
+  z-index: 1000;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+nav ul {
   display: flex;
   justify-content: center;
+  list-style-type: none;
 }
 
-.navbar li {
-  margin: 0 15px;
+nav ul li {
+  margin: 10px;
 }
 
-.navbar a {
+nav ul li a {
+  color: white;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  padding: 10px;
 }
 
-/* تنسيق للأقسام */
 section {
-  padding: 60px 20px;
-  margin: 20px 0;
-  border: 1px solid #ddd;
-}
-
-section h2 {
-  margin-top: 0;
-}
-
-/* تأثير اللون للقسم النشط عند التمرير */
-.active-section {
-  background-color: #f0f8ff;
+  padding: 100px 20px;
+  margin-top: 50px;
+  height: 100vh;
 }
 
 /* استجابة للأجهزة الصغيرة */
